@@ -1,1127 +1,169 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Полезные ссылки 👨‍💻 для веб-разработчика" />
+    <meta property="og:description" content="Программы, сервисы и сайты, которые помогут в работе." />
+    <meta property="og:image" content="img/preview.jpg" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://aislam23.github.io/links/" />
+    <title>Полезные ссылки 👨‍💻 для веб-разработчика</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-<meta charset="UTF-8">
 
-<title>ST3 hotkeys</title>
-
-<meta name="description" content="Горячие кнопки Sumlome Text 3 для Windows/OSX. Автоновная шпаргралка с фильтром.">
-
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-
-<style>
-  * {box-sizing: border-box;margin: 0;padding: 0;}
-
-  body {
-    font-size: 15px;
-    line-height: 1.1;
-    font-family: Roboto,Helvetica,Ubuntu,Tahoma,sans-serif;
-  }
- 
-  iframe {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  pre,
-  kbd,
-  code {
-    font-family: 'Lucida Console',monospace;
-    font-size: 90%;
-    white-space: nowrap;
-  }
-
-  kbd span[class^="icon-"]:before {
-    vertical-align: .15em;
-    font-size: 70%;
-  }
-
-  h1 {
-    font-size: 1.5em;
-    margin: 1.5em 0 .6em;
-  }
-
-  h2 {
-    font-size: 1.3em;
-    margin: .6em 0;
-  }
-
-  p {
-    margin-bottom: .5em;
-    line-height: 1.3;
-  }
-
-  pre {
-    margin-bottom: .65em;
-  }
-
-  small {
-    font-size: .85em;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  ul.list {
-    margin-bottom: .5em;
-    list-style-type: square;
-    padding-left: 2em;
-  }
-
-
-
-/*----------------------------------------------------------------------------*\
-  Раскладка
-\*----------------------------------------------------------------------------*/
-
-  .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 1366px;
-    margin: auto;
-  }
-
-  .row {
-    display: flex;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
-  .col {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 50%;
-  }
-
-
-
-/*----------------------------------------------------------------------------*\
-  Шапка и форма поиска
-\*----------------------------------------------------------------------------*/
-
-  .find {
-    display: block;
-    width: 300px;
-    margin: 1em auto;
-    padding: .3em;
-    font-size: 1.2em;
-    min-width: 20em;
-  }
-
-  .page-header {
-    text-align: center;
-    margin-bottom: 2em;
-  }
-
-  .select-os {
-    margin-bottom: 1em;
-    text-align: center;
-  }
-
-  .select-os label {
-    display: inline-block;
-    white-space: nowrap;
-    vertical-align: top;
-    margin: 0 1em;
-  }
-
-
-
-/*----------------------------------------------------------------------------*\
-  Блоки с кнопками
-\*----------------------------------------------------------------------------*/
-
-  .keys-block {
-    margin: 15px 0;
-  }
-
-  .keys-block__name {
-    font-size: 100%;
-    font-weight: 700;
-    margin: 0;
-    padding: .4em;
-  }
-
-  .keys-block__list {
-    border-top: 1px solid rgba(0,0,0,.05);
-  }
-
-  .keys-block__list li {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .keys-block__list li:target {
-    background-color: #FAE4A1;
-  }
-
-  .keys-block__list li:target * {
-    color: #000;
-  }
-
-  .keys-block--1 .keys-block__list {background-color: hsl(0,100%,98%);}
-  .keys-block--2 .keys-block__list {background-color: hsl(180,100%,96%);}
-  .keys-block--3 .keys-block__list {background-color: hsl(30,100%,98%);}
-  .keys-block--4 .keys-block__list {background-color: hsl(210,100%,98%);}
-  .keys-block--5 .keys-block__list {background-color: hsl(60,100%,98%);}
-  .keys-block--6 .keys-block__list {background-color: hsl(240,100%,99%);}
-  .keys-block--7 .keys-block__list {background-color: hsl(90,100%,98%);}
-  .keys-block--8 .keys-block__list {background-color: hsl(270,100%,98%);}
-  .keys-block--9 .keys-block__list {background-color: hsl(120,100%,98%);}
-  .keys-block--10 .keys-block__list {background-color: hsl(30,100%,98%);}
-  .keys-block--11 .keys-block__list {background-color: hsl(300,100%,98%);}
-
-
-/*----------------------------------------------------------------------------*\
-  Само описание кнопок
-\*----------------------------------------------------------------------------*/
-
-  .keys {
-    padding: .3em .4em;
-    text-align: left;
-    vertical-align: top;
-    border-bottom: 1px solid rgba(0,0,0,.05);
-  }
-
-  .keys--descr {
-    flex: 1 1 auto;
-    max-width: 313px;
-    color: #666;
-  }
-
-  .keys--descr small {
-    opacity: .65;
-  }
-
-  .keys--win,
-  .keys--osx {
-    width: 170px;
-  }
-
-  .clarification {
-    width: 100%;
-    font-size: .85em;
-    line-height: 1.3;
-    background-color: #FAE4A1;
-    color: #000;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    height: 1px;
-    overflow: hidden;
-    transition: opacity .4s;
-  }
-
-  .clarification:target {
-    opacity: 1;
-    position: static;
-    height: auto;
-    padding: .4em .5em;
-  }
-
-
-
-/*----------------------------------------------------------------------------*\
-  Блок описания переназначения кнопок
-\*----------------------------------------------------------------------------*/
-
-  .remap-keys {
-    background-color: #FAE4A1;
-    color: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1px;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity .5s;
-  }
-
-  .remap-keys:target {
-    opacity: 1;
-    position: static;
-    visibility: visible;
-    height: auto;
-    padding: .5em 1em 1em;
-    margin: .5em 0 1em;
-  }
-
-
-
-/*----------------------------------------------------------------------------*\
-  Иконки
-\*----------------------------------------------------------------------------*/
-
-  a[class*=" icon-"],
-  a[class^=icon-] {
-    text-decoration: none;
-  }
-
-  [class*=" icon-"]:before,
-  [class^=icon-]:before {
-    font-family: fontello;
-    font-size: 80%;
-    font-style: normal;
-    font-weight: 400;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  .icon-down:before {content: '\e800';}
-  .icon-left:before {content: '\e801';}
-  .icon-right:before {content: '\e802';}
-  .icon-up:before {content: '\e803';}
-  .icon-info:before {content: '\e804';}
-  .icon-cancel:before {content: '\e805';}
-  .icon-help:before {content: '\e806';}
-  .icon-attention:before {content: '\e807';}
-
-  .icon-info:before,
-  .icon-cancel:before,
-  .icon-help:before,
-  .icon-attention:before {
-    font-size: 1.3em;
-    line-height: .8em;
-    vertical-align: -.1em;
-    color: rgba(0,0,0,.3);
-  }
-
-  /* http://jaicab.com/localFont/ */
-  @font-face {
-    font-family: 'fontello';
-    font-weight: 500;
-    font-style: normal;
-    src: url(data:application/font-woff;charset=utf-8;base64,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) format("woff");
-  }
-
-
-
-/*----------------------------------------------------------------------------*\
-  Прочее
-\*----------------------------------------------------------------------------*/
-
-  .plus {
-    display: inline-block;
-    vertical-align: middle;
-    color: rgba(0,0,0,.3);
-    padding: 0 .2em;
-  }
-
-  .slash {
-    display: inline-block;
-    vertical-align: middle;
-    color: rgba(0,0,0,.3);
-    padding: 0 .2em;
-  }
-
-  .hidden {
-    display: none !important;
-  }
-
-  .about {
-    padding: 1em .4em;
-    border-top: 1px solid rgba(0,0,0,.1);
-  }
-
-</style>
 
 </head>
+
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">
 
-<header class="page-header  container">
-  <h1>Шпаргалка ниндзя Sublime Text 3</h1>
-  <p>Николай Громов. <a href="http://nicothin.ru">nicothin.ru</a></p>
-</header>
-
-<div class="container">
-  <input class="find" type="text" id="find" value="" placeholder="Минимум 3 символа">
-  <div class="select-os">
-    <label>
-      <input type="checkbox" id="os_win" checked onchange="javascript:keys_trigger('os_win','keys--win');"> Windows
-    </label>
-    <label>
-      <input type="checkbox" id="os_osx" checked onchange="javascript:keys_trigger('os_osx','keys--osx');"> OS X
-    </label>
-  </div>
-</div>
-
-
-
-<div class="container">
-  <div class="row">
-
-    <div class="col">
-
-      <div class="keys-block  keys-block--1" id="subl-keys-select">
-        <h2 class="keys-block__name">Выделение</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-select-1">
-            <div class="keys  keys--descr">Выделить слово, в котором курсор <br>
-              <small>(2× — выделение совпадающих)</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="socials">
+                        <a target="_blank" href="" class="social"><img src="img/vk.svg" alt="Группа вконтакте" title="Группа вконтакте"></a>
+                        <a target="_blank" href="" class="social"><img src="img/facebook.svg" alt="Группа facebook" title="Группа facebook"></a>
+                        <a target="_blank" href="" class="social"><img src="img/youtube.svg" alt="Канал на YouTube" title="Канал на YouTube "></a>
+                        <a target="_blank" href="" class="social"><img src="img/instagram.svg" alt="Instagram" title="Instagram"></a>
+                    </div>
+                </div>
             </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>D</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>D</kbd></div>
-          </li>
-          <li id="subl-keys-select-2">
-            <div class="keys  keys--descr">Найти и выделить всё <br>
-              <small>(выделено слово)</small>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="header__title">Полезные ссылки 👨‍ 💻 для&nbsp;веб-разработчика</h1>
+                    <p class="header__text">Программы, сервисы и сайты, которые помогут в работе.</p>
+                    <a href="" class="btn btn-primary"> <span class="button-text">Добавить свою ссылку</span> <img class="button-img" src="img/github-logo.svg" alt=""></a>
+                </div>
             </div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>F3</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>G</kbd></div>
-          </li>
-          <li id="subl-keys-select-3">
-            <div class="keys  keys--descr">Выделить строку</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>L</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>L</kbd></div>
-          </li>
-          <li id="subl-keys-select-4">
-            <div class="keys  keys--descr">Выделить содержимое скобок</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>M</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>M</kbd></div>
-          </li>
-          <li id="subl-keys-select-5">
-            <div class="keys  keys--descr">Выделить слово справа от курсора</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-right"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-right"></span></kbd></div>
-          </li>
-          <li id="subl-keys-select-6">
-            <div class="keys  keys--descr">Выделить слово слева от курсора</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-left"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-left"></span></kbd></div>
-          </li>
-          <li id="subl-keys-select-7">
-            <div class="keys  keys--descr">Выделить строки с идентичным отступом</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>J</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>J</kbd></div>
-          </li>
-          <li id="subl-keys-select-8">
-            <div class="keys  keys--descr">Вертикальное выделение</div>
-            <div class="keys  keys--win"><kbd>Shift<span class="plus">+</span>ПКМ</kbd></div>
-            <div class="keys  keys--osx">-</div>
-          </li>
-        </ul>
-      </div>
+        </div>
+    </header>
 
-      <div class="keys-block  keys-block--2" id="subl-keys-search">
-        <h2 class="keys-block__name">Поиск</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-search-1">
-            <div class="keys  keys--descr">Поиск конкретного файла в проекте</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>P</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>P</kbd></div>
-          </li>
-          <li id="subl-keys-search-2">
-            <div class="keys  keys--descr">Поиск в файле</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>F</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>F</kbd></div>
-          </li>
-          <li id="subl-keys-search-3">
-            <div class="keys  keys--descr">Поиск <span class="icon-right"></span> следующее вхождение</div>
-            <div class="keys  keys--win"><kbd>Enter</kbd></div>
-            <div class="keys  keys--osx"><kbd>Enter</kbd></div>
-          </li>
-          <li id="subl-keys-search-4">
-            <div class="keys  keys--descr">Поиск <span class="icon-right"></span> выделить всё найденное</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>Enter</kbd></div>
-            <div class="keys  keys--osx"><kbd>Alt<span class="plus">+</span>Enter</kbd></div>
-          </li>
-          <li id="subl-keys-search-5">
-            <div class="keys  keys--descr">Поиск <span class="icon-right"></span> предыдущее вхождение</div>
-            <div class="keys  keys--win"><kbd>Shift<span class="plus">+</span>Enter</kbd></div>
-            <div class="keys  keys--osx"><kbd>Shift<span class="plus">+</span>Enter</kbd></div>
-          </li>
-          <li id="subl-keys-search-6">
-            <div class="keys  keys--descr">Поиск <span class="icon-right"></span> закрыть, выделить результат</div>
-            <div class="keys  keys--win"><kbd>Esc</kbd></div>
-            <div class="keys  keys--osx"><kbd>Esc</kbd></div>
-          </li>
-          <li id="subl-keys-search-7">
-            <div class="keys  keys--descr">Поиск <span class="icon-right"></span> вкл./выкл. рег. выражения</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>R</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Alt<span class="plus">+</span>R</kbd></div>
-          </li>
-          <li id="subl-keys-search-8">
-            <div class="keys  keys--descr">Поиск <span class="icon-right"></span> вкл./выкл. чувств. к регистру</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>C</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Alt<span class="plus">+</span>C</kbd></div>
-          </li>
-          <li id="subl-keys-search-9">
-            <div class="keys  keys--descr">Поиск <span class="icon-right"></span> вкл./выкл. поиск слова целиком</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>W</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Alt<span class="plus">+</span>W</kbd></div>
-          </li>
-          <li id="subl-keys-search-10">
-            <div class="keys  keys--descr">Живой поиск в файле</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>I</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>I</kbd></div>
-          </li>
-          <li id="subl-keys-search-11">
-            <div class="keys  keys--descr">Живой поиск <span class="icon-right"></span> закрыть, выдел. результат</div>
-            <div class="keys  keys--win"><kbd>Enter</kbd></div>
-            <div class="keys  keys--osx"><kbd>Enter</kbd></div>
-          </li>
-          <li id="subl-keys-search-12">
-            <div class="keys  keys--descr">Живой поиск <span class="icon-right"></span> закрыть</div>
-            <div class="keys  keys--win"><kbd>Esc</kbd></div>
-            <div class="keys  keys--osx"><kbd>Esc</kbd></div>
-          </li>
-          <li id="subl-keys-search-13">
-            <div class="keys  keys--descr">Поиск и замена по файлам в папке</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>F</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>F</kbd></div>
-          </li>
-          <li id="subl-keys-search-14">
-            <div class="keys  keys--descr">Поиск и замена по файлу</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>H</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>F</kbd></div>
-          </li>
-          <li id="subl-keys-search-15">
-            <div class="keys  keys--descr">Заменить следущее</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>H</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>E</kbd></div>
-          </li>
-          <li id="subl-keys-search-16">
-            <div class="keys  keys--descr">Следущее вхождение искомого</div>
-            <div class="keys  keys--win"><kbd>F3</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>G</kbd></div>
-          </li>
-          <li id="subl-keys-search-17">
-            <div class="keys  keys--descr">Предыдущее вхождение искомого</div>
-            <div class="keys  keys--win"><kbd>Shift<span class="plus">+</span>F3</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>G</kbd></div>
-          </li>
-          <li id="subl-keys-search-18">
-            <div class="keys  keys--descr">Следущее вхождение искомого <br>
-              <small>(только в ходе поиска по файлам в папке)</small>
+    <main class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3 class="section-title">Редакторы кода</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="https://code.visualstudio.com/">VS Code</a> – мощный редактор (IDE) </li>
+                        <li><a target="_blank" href="http://www.sublimetext.com/">Sublime text 3</a> – удобный и быстрый редактор кода</li>
+                        <li><a target="_blank" href="https://atom.io/">Atom</a> – крутой редактор от GitHub</li>
+                        <li><a target="_blank" href="http://brackets.io/">Brackets</a> – подходит для начинающих</li>
+                        <li><a target="_blank" href="https://notepad-plus-plus.org/">Notepad ++ </a>– крутой редактор кода</li>
+                    </ol>
+                    <h3 class="section-title">Песочницы для кода</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="https://jsfiddle.net/">JS fiddle</a> – Песочница для JavaScript </li>
+                        <li><a target="_blank" href="http://www.codepen.io/">CodePen</a> – Песочница для HTML, CSS о JS</li>
+                        <li><a target="_blank" href="http://cssdeck.com/">CSS Desk</a> – Еще одна песочница</li>
+                    </ol>
+                    <h3 class="section-title">Работа с изображениями</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="https://compressor.io/">Сompressor</a> – Сжимает JPG и PNG </li>
+                        <li><a target="_blank" href="https://tinypng.com/">Tiny png</a> – Сжимает изображения. Есть API. </li>
+                    </ol>
+                    <h3 class="section-title">Шпаргалки</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="http://htmlbook.ru/css-cheat-sheet">HTML Book</a> – шпаргалка по HTML и CSS</li>
+                        <li><a target="_blank" href="https://adam-marsden.co.uk/css-cheat-sheet">CSS Cheat Sheet</a> – шпаргалка по CSS</li>
+                        <li><a target="_blank" href="http://jquery.page2page.ru/">jQuery page2page</a> – шпаргалка по jQuery</li>
+                        <li><a target="_blank" href="https://docs.emmet.io/cheat-sheet/">Emmet Cheat Sheet</a> – шпаргалка по Emmet</li>
+                        <li><a target="_blank" href="https://webref.ru/">WebReference</a> - ещё одна шпаргалка по HTML5 и CSS3. Также данный сайт опубликовал свои шпаргалки в виде приложений на Google Play.</li>
+                    </ol>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <h3 class="section-title">Шрифты</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="http://fonts.google.com/">Google Fonts</a> – Веб-шрифты от Google</li>
+                        <li><a target="_blank" href="https://transfonter.org/">Transfonter</a> – Конвертер веб-шрифтов</li>
+                        <li><a target="_blank" href="http://www.fontov.net/">Фонтов.нет</a> – Подбор шрифта по фразе</li>
+                        <li><a target="_blank" href="http://fonts4web.ru/">Fonts4web</a> – Шрифты для сайтов</li>
+                    </ol>
+                    <h3 class="section-title">Проверка кода</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="https://caniuse.com/">Can I Use</a> – Кроссбраузерность кода</li>
+                        <li><a target="_blank" href="http://validator.w3.org/">Validator W3</a> – Валидность HTML-кода</li>
+                        <li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights">PageSpeed Insights</a> – Проверка оптимизации страницы</li>
+                    </ol>
+                    <h3 class="section-title">Лайфхаки для верстальщика</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="http://howtocenterincss.com/">How To Center in CSS</a> – центрируйте всё</li>
+                        <li><a target="_blank" href="https://codyhouse.co/">CodeHouse</a> – крутые подборки готовых решений на CSS и jQuery без плагинов</li>
+                        <li><a target="_blank" href="https://learngitbranching.js.org/">Learn Git Branching</a> – интерактивный учебник по Git</li>
+                    </ol>
+                    <h3 class="section-title">Полезные jQuery плагины</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="http://kenwheeler.github.io/slick/">​​Slick</a> – Адаптивный слайдер</li>
+                        <li><a target="_blank" href="https://owlcarousel2.github.io/OwlCarousel2/">​​Owl Carousel</a> – Адаптивный слайдер-карусель</li>
+                        <li><a target="_blank" href="http://iamceege.github.io/tooltipster/">Tooltipster</a> – Создание всплывающих подсказок</li>
+                        <li><a target="_blank" href="https://flatpickr.js.org/examples/">​​flatpickr</a> – Всплывающие окна с выбором даты</li>
+                    </ol>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <h3 class="section-title">Иконки и графика</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="https://www.flaticon.com/">Flaticons</a> – бесплатные векторные иконки</li>
+                        <li><a target="_blank" href="https://seeklogo.com/">Seeklogo</a> – векторные логотипы компаний</li>
+                        <li><a target="_blank" href="https://svgporn.com/">SVG Porn</a> – векторные логотипы </li>
+                        <li><a target="_blank" href="http://toplogos.ru/">TOP Logos</a> – логотипы компаний (русские)</li>
+                        <li><a target="_blank" href="http://fontawesome.com/">Font Awesome</a> – иконочный шрифт + SVG</li>
+                        <li><a target="_blank" href="https://utf8-icons.com/">UTF-8 Icons</a> – иконки на utf-8</li>
+                    </ol>
+                    <h3 class="section-title">Работа с дизайн-макетами</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="https://avocode.com/">Avocode</a> – платформа для работы макетами для верстальщиков (PSD, Sketch и др)</li>
+                        <li><a target="_blank" href="https://assets.adobe.com/">Adobe Assets</a> – работа с PSD-макетами прямо в браузере. Экспорт кода.</li>
+                        <li><a target="_blank" href="https://zeplin.io/">Zeplin</a> – работа с дизайн-макетами в браузере. Есть экспорт кода.</li>
+                        <li><a target="_blank" href="https://psdetch.com/">PSD Tech</a> – бесплатный аналог Avocode.</li>
+                    </ol>
+                    <h3 class="section-title">Библиотеки с анимациями</h3>
+                    <ol class="unstyled-list">
+                        <li><a target="_blank" href="https://ru.freepik.com">Freepik</a> – Свободные изображения</li>
+                        <li><a target="_blank" href="https://daneden.github.io/animate.css/">Animate.css</a> – библиотека CSS анимаций</li>
+                        <li><a target="_blank" href="https://www.minimamente.com/example/magic_animations/">Magic</a> – кроссбраузерные анимации</li>
+                        <li><a target="_blank" href="http://shakrmedia.github.io/tuesday/">It's Tuesday.</a> – простые и приятные CSS анимации</li>
+                    </ol>
+                </div>
+                <!-- /.col-lg-4 -->
             </div>
-            <div class="keys  keys--win"><kbd>F4</kbd></div>
-            <div class="keys  keys--osx"><kbd>F4</kbd></div>
-          </li>
-          <li id="subl-keys-search-19">
-            <div class="keys  keys--descr">Предыдущее вхождение искомого <br>
-              <small>(только в ходе поиска по файлам в папке)</small>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo">Академия Вёрстки</div>
+                    <small>Онлайн-школа веб-разработки</small>
+                </div>
+                <div class="col-md-4">
+                    <div class="legal">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="socials">
+                        <a target="_blank" href="https://vk.com/glo_academy" class="social"><img src="img/vk.svg" alt="Группа вконтакте" title="Группа вконтакте"></a>
+                        <a target="_blank" href="" class="social"><img src="img/facebook.svg" alt="Группа facebook" title="Группа facebook"></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCVswRUcKC-M35RzgPRv8qUg" class="social"><img src="img/youtube.svg" alt="Канал на YouTube" title="Канал на YouTube "></a>
+                        <a target="_blank" href="https://www.instagram.com/glo_web_academy/" class="social"><img src="img/instagram.svg" alt="Instagram" title="Instagram"></a>
+                    </div>
+                </div>
             </div>
-            <div class="keys  keys--win"><kbd>Shift<span class="plus">+</span>F4</kbd></div>
-            <div class="keys  keys--osx"><kbd>Shift<span class="plus">+</span>F4</kbd></div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="keys-block  keys-block--3" id="subl-keys-blocks">
-        <h2 class="keys-block__name">Блоки кода</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-blocks-1">
-            <div class="keys  keys--descr">Свернуть текущий блок</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>[</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>[</kbd></div>
-          </li>
-          <li id="subl-keys-blocks-2">
-            <div class="keys  keys--descr">Развернуть текущий блок</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>]</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>]</kbd></div>
-          </li>
-          <li id="subl-keys-blocks-3">
-            <div class="keys  keys--descr">Закомментировать строку</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>/</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>/</kbd></div>
-          </li>
-          <li id="subl-keys-blocks-4">
-            <div class="keys  keys--descr">Закомментировать блок кода <br>
-              <small>(курсор в блоке)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>/</kbd></div>
-            <div class="keys  keys--osx">-</div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="keys-block  keys-block--4" id="subl-keys-tabs">
-        <h2 class="keys-block__name">Вкладки</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-tabs-1">
-            <div class="keys  keys--descr">Создать вкладку</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>N</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>N</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-2">
-            <div class="keys  keys--descr">Закрыть вкладку</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>W</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>W</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-3">
-            <div class="keys  keys--descr">Сохранить</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>S</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>S</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-4">
-            <div class="keys  keys--descr">Сохранить как</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>S</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>S</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-5">
-            <div class="keys  keys--descr">Переместить вкладку в обл. с номером <br>
-              <small>(показаны 2 и более областей)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>1...0</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>1...0</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-6">
-            <div class="keys  keys--descr">Показать соотв. вкладку</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>1...0</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>1...0</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-7">
-            <div class="keys  keys--descr">Предыдущая вкладка</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>PageUp</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>[</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-8">
-            <div class="keys  keys--descr">Следующая вкладка</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>PageDown</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>]</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-9">
-            <div class="keys  keys--descr">Следующая вкладка в стеке</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Tab</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Tab</kbd></div>
-          </li>
-          <li id="subl-keys-tabs-10">
-            <div class="keys  keys--descr">Предыдущая вкладка в стеке</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>Tab</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>Tab</kbd></div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="keys-block  keys-block--10" id="plugin-emmet">
-        <h2 class="keys-block__name">Emmet (<a href="https://packagecontrol.io/packages/Emmet">плагин</a>)</h2>
-        <ul class="keys-block__list">
-          <li id="plugin-emmet-0">
-            <div class="keys  keys--descr">Развернуть аббревиатуру
-            </div>
-            <div class="keys  keys--win"><kbd>Tab</kbd></div>
-            <div class="keys  keys--osx"><kbd>Tab</kbd></div>
-          </li>
-          <li id="plugin-emmet-2">
-            <div class="keys  keys--descr">Интерактивная аббревиатура<br>
-              <small>(пишем аббревиатуру и видим результат)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Alt<span class="plus">+</span>Enter</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Alt<span class="plus">+</span>Enter</kbd></div>
-          </li>
-          <li id="plugin-emmet-1">
-            <div class="keys  keys--descr">Убрать тег, в котором курсор<br>
-              <small>(табуляция сохранится правильной)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>;</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>'</kbd></div>
-          </li>
-          <li id="plugin-emmet-3">
-            <div class="keys  keys--descr">Выделить тег и его контент<br>
-              <small>(2× и далее — выделить и родителя)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>,</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>D</kbd></div>
-          </li>
-          <li id="plugin-emmet-4">
-            <div class="keys  keys--descr">Убрать из выделения родительский тег<br>
-              <small>(обратное <a href="#plugin-emmet-3">этому</a>)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>0</kbd> <a class="icon-attention" href="#plugin-emmet-4-clarification" title="Есть уточнение, кликайте"></a></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>J</kbd></div>
-            <div class="clarification" id="plugin-emmet-4-clarification">У меня эта комбинация, почему-то, не работает (даже если ее вписать в пользовательских настройках), хотя прочих конфликтов нет. Помогает только смена кнопок (к примеру, на <kbd>Ctrl<span class="plus">+</span>.</kbd>)</div>
-          </li>
-          <li id="plugin-emmet-5">
-            <div class="keys  keys--descr">Перейти к парному тегу
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Alt<span class="plus">+</span>J</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>T</kbd> ???</div>
-          </li>
-          <li id="plugin-emmet-6">
-            <div class="keys  keys--descr">Обернуть выделенное в аббревиатуру
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>G</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>W</kbd></div>
-          </li>
-          <li id="plugin-emmet-7">
-            <div class="keys  keys--descr">Переход между точками редактирования<br>
-              <small>(<a href="#plugin-emmet-7-clarification">что за точки?</a>)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-left"></span><span class="slash">/</span><span class="icon-right"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-left"></span><span class="slash">/</span><span class="icon-right"></span></kbd></div>
-            <div class="clarification" id="plugin-emmet-7-clarification">Точки редактирования это: пустые теги, пустые атрибуты, пустые строки с отступами.</div>
-          </li>
-          <li id="plugin-emmet-8">
-            <div class="keys  keys--descr">Выделять области ред-я (след./пред.)<br>
-              <small>(<a href="#plugin-emmet-8-clarification">что за области?</a>)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>.<span class="slash">/</span>,</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>.<span class="slash">/</span>,</kbd></div>
-            <div class="clarification" id="plugin-emmet-8-clarification">Области редактирования это: теги, атрибуты целиком, значения атрибутов целиком, значения атрибутов отдельно. Подробнее — в <a href="http://docs.emmet.io/actions/select-item/">демонстрации</a>.</div>
-          </li>
-          <li id="plugin-emmet-9">
-            <div class="keys  keys--descr">Закомментировать строку или блок<br>
-              <small>(Если курсор вне тега, закомментируется содержимое родительского тега)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>/</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>/</kbd></div>
-          </li>
-          <li id="plugin-emmet-11">
-            <div class="keys  keys--descr">Сделать тег парным/непарным</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>`</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>`</kbd></div>
-          </li>
-          <li id="plugin-emmet-12">
-            <div class="keys  keys--descr">Обновить/добавить размеры картинки</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>U</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>I</kbd></div>
-          </li>
-          <li id="plugin-emmet-13">
-            <div class="keys  keys--descr">Подсчитать мат. выражение</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>Y</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>Y</kbd></div>
-          </li>
-          <li id="plugin-emmet-14">
-            <div class="keys  keys--descr">Синхронизировать CSS-правила<br>
-              <small>(несколько правил с вендорными префиксами)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>R</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>R</kbd></div>
-          </li>
-          <li id="plugin-emmet-15">
-            <div class="keys  keys--descr">Кодировать/декодировать картинку в data:URL</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>'</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>D</kbd></div>
-          </li>
-          <li id="plugin-emmet-16">
-            <div class="keys  keys--descr">Выделить откр. и закр. тег<br>
-              <small>(Редактировать тег)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>'</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>K</kbd></div>
-          </li>
-          <li id="plugin-emmet-16">
-            <div class="keys  keys--descr">Изменить число на 1</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd> <a class="icon-attention" href="#plugin-emmet-16-clarification" title="Есть уточнение, кликайте"></a></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd></div>
-            <div class="clarification" id="plugin-emmet-16-clarification">В Windows конфликтует с <a href="#subl-keys-other-1">этим</a> и <a href="#subl-keys-other-2">этим</a>. Нужно переназначать менее нужное.</div>
-          </li>
-          <li id="plugin-emmet-16">
-            <div class="keys  keys--descr">Изменить число на 0.1</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Alt<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd></div>
-          </li>
-          <li id="plugin-emmet-16">
-            <div class="keys  keys--descr">Изменить число на 10</div>
-            <div class="keys  keys--win"><kbd>Shift<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd></div>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="col">
-
-      <div class="keys-block  keys-block--5" id="subl-keys-text">
-        <h2 class="keys-block__name">Текст</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-text-1">
-            <div class="keys  keys--descr">Вставить из буфера с отступом</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>V</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>V</kbd></div>
-          </li>
-          <li id="subl-keys-text-2">
-            <div class="keys  keys--descr">Удалить слово перед курсором</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span><abbr title="Backspace">Bsp</abbr></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span><abbr title="Backspace">Bsp</abbr></kbd></div>
-          </li>
-          <li id="subl-keys-text-3">
-            <div class="keys  keys--descr">Удалить слово после курсора</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Del</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Del</kbd></div>
-          </li>
-          <li id="subl-keys-text-4">
-            <div class="keys  keys--descr">Удалить строку перед курсором</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><abbr title="Backspace">Bsp</abbr></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span><abbr title="Backspace">Bsp</abbr></kbd></div>
-          </li>
-          <li id="subl-keys-text-5">
-            <div class="keys  keys--descr">Удалить строку после курсора</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>Del</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>Del</kbd></div>
-          </li>
-          <li id="subl-keys-text-6">
-            <div class="keys  keys--descr">Продублировать текст <br>
-              <small>(выделен фрагмент текста)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>D</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>D</kbd></div>
-          </li>
-          <li id="subl-keys-text-7">
-            <div class="keys  keys--descr">Преобразовать в прописные буквы <br>
-              <small>(выделен фрагмент текста)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>K<span class="plus">+</span>U</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>K<span class="plus">+</span>U</kbd></div>
-          </li>
-          <li id="subl-keys-text-8">
-            <div class="keys  keys--descr">Преобразовать в строчные буквы <br>
-              <small>(выделен фрагмент текста)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>K<span class="plus">+</span>L</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>K<span class="plus">+</span>L</kbd></div>
-          </li>
-          <li id="subl-keys-text-9">
-            <div class="keys  keys--descr">Проверка орфографии вкл./выкл.</div>
-            <div class="keys  keys--win"><kbd>F6</kbd></div>
-            <div class="keys  keys--osx"><kbd>F6</kbd></div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="keys-block  keys-block--6" id="subl-keys-lines">
-        <h2 class="keys-block__name">Строки</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-lines-1">
-            <div class="keys  keys--descr">Добавить строке отступ <br>
-              <small>(курсор в начале строки)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Tab<kbd></div>
-            <div class="keys  keys--osx"><kbd>Tab</kbd></div>
-          </li>
-          <li id="subl-keys-lines-2">
-            <div class="keys  keys--descr">Убрать строке отступ <br>
-              <small>(курсор в начале строки)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Shift<span class="plus">+</span>Tab</kbd></div>
-            <div class="keys  keys--osx"><kbd>Shift<span class="plus">+</span>Tab</kbd></div>
-          </li>
-          <li id="subl-keys-lines-3">
-            <div class="keys  keys--descr">Добавить строке отступ <br>
-              <small>(курсор в любой позиции)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>]</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>]</kbd></div>
-          </li>
-          <li id="subl-keys-lines-4">
-            <div class="keys  keys--descr">Убрать у строки отступ <br>
-              <small>(курсор в любой позиции)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>[</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>[</kbd></div>
-          </li>
-          <li id="subl-keys-lines-5">
-            <div class="keys  keys--descr">Поднять строку вверх</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-up"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span><span class="icon-up"></span></kbd></div>
-          </li>
-          <li id="subl-keys-lines-5">
-            <div class="keys  keys--descr">Опустить строку вниз</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-down"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span><span class="icon-down"></span></kbd></div>
-          </li>
-          <li id="subl-keys-lines-6">
-            <div class="keys  keys--descr">Продублировать строку <br>
-              <small>(нет выделения)</small>
-            </div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>D</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>D</kbd></div>
-          </li>
-          <li id="subl-keys-lines-7">
-            <div class="keys  keys--descr">Вставить строку выше курсора</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>Enter</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>Enter</kbd></div>
-          </li>
-          <li id="subl-keys-lines-8">
-            <div class="keys  keys--descr">Вставить строку ниже курсора</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Enter</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Enter</kbd></div>
-          </li>
-          <li id="subl-keys-lines-9">
-            <div class="keys  keys--descr">Удалить строку, в которой курсор</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>K</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>K</kbd></div>
-          </li>
-          <li id="subl-keys-lines-10">
-            <div class="keys  keys--descr">Объединить строки</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>J</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>J</kbd></div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="keys-block  keys-block--7" id="subl-keys-goto">
-        <h2 class="keys-block__name">Переходы</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-goto-1">
-            <div class="keys  keys--descr">Переход к файлу в проекте (фильтр)</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>P</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>P</kbd></div>
-          </li>
-          <li id="subl-keys-goto-2">
-            <div class="keys  keys--descr">Перейти к парной скобке</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>M</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>M</kbd></div>
-          </li>
-          <li id="subl-keys-goto-3">
-            <div class="keys  keys--descr">Перейти к строке</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>G</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>G</kbd></div>
-          </li>
-          <li id="subl-keys-goto-4">
-            <div class="keys  keys--descr">Поставить на строке закладку</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>F2</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>F2</kbd></div>
-          </li>
-          <li id="subl-keys-goto-5">
-            <div class="keys  keys--descr">К следующей закладке</div>
-            <div class="keys  keys--win"><kbd>F2</kbd></div>
-            <div class="keys  keys--osx"><kbd>F2</kbd></div>
-          </li>
-          <li id="subl-keys-goto-6">
-            <div class="keys  keys--descr">К предыдущей закладке</div>
-            <div class="keys  keys--win"><kbd>Shift<span class="plus">+</span>F2</kbd></div>
-            <div class="keys  keys--osx"><kbd>Shift<span class="plus">+</span>F2</kbd></div>
-          </li>
-          <li id="subl-keys-goto-7">
-            <div class="keys  keys--descr">Убрать все закладки</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>F2</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>F2</kbd></div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="keys-block  keys-block--8" id="subl-keys-cursor">
-        <h2 class="keys-block__name">Курсор</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-cursor-1">
-            <div class="keys  keys--descr">Добавить курсор на стр. выше или ниже</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd></div>
-          </li>
-          <li id="subl-keys-cursor-2">
-            <div class="keys  keys--descr">Убрать мультикурсор</div>
-            <div class="keys  keys--win"><kbd>Esc</kbd></div>
-            <div class="keys  keys--osx"><kbd>Esc</kbd></div>
-          </li>
-          <li id="subl-keys-cursor-3">
-            <div class="keys  keys--descr">Добавить мультикурсор</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>ЛКМ</kbd></div>
-            <div class="keys  keys--osx"><kbd>Cmd<span class="plus">+</span>ЛКМ</kbd></div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="keys-block  keys-block--9" id="subl-keys-layouts">
-        <h2 class="keys-block__name">Внешний вид</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-layouts-1">
-            <div class="keys  keys--descr">Полный экран</div>
-            <div class="keys  keys--win"><kbd>F11</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>F</kbd></div>
-          </li>
-          <li id="subl-keys-layouts-2">
-            <div class="keys  keys--descr">Только область редактирования</div>
-            <div class="keys  keys--win"><kbd>Shift<span class="plus">+</span>F11</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>F</kbd></div>
-          </li>
-          <li id="subl-keys-layouts-3">
-            <div class="keys  keys--descr">Показать одну/несколько обл. ред.</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>Shift<span class="plus">+</span>1...4</kbd></div>
-            <div class="keys  keys--osx"><kbd>Alt<span class="plus">+</span>Cmd<span class="plus">+</span>1...4</kbd></div>
-          </li>
-          </tr>
-          <li id="subl-keys-layouts-4">
-            <div class="keys  keys--descr">Области ред-я сеткой 2×2</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>Shift<span class="plus">+</span>5</kbd></div>
-            <div class="keys  keys--osx"><kbd>Alt<span class="plus">+</span>Cmd<span class="plus">+</span>5</kbd></div>
-          </li>
-          <li id="subl-keys-layouts-5">
-            <div class="keys  keys--descr">Области ред-я в две линии</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>Shift<span class="plus">+</span>8</kbd></div>
-            <div class="keys  keys--osx"><kbd>Alt<span class="plus">+</span>Shift<span class="plus">+</span>Cmd<span class="plus">+</span>2</kbd></div>
-          </li>
-          <li id="subl-keys-layouts-6">
-            <div class="keys  keys--descr">Области ред-я в три линии</div>
-            <div class="keys  keys--win"><kbd>Alt<span class="plus">+</span>Shift<span class="plus">+</span>9</kbd></div>
-            <div class="keys  keys--osx"><kbd>Alt<span class="plus">+</span>Shift<span class="plus">+</span>Cmd<span class="plus">+</span>3</kbd></div>
-          </li>
-          <li id="subl-keys-layouts-7">
-            <div class="keys  keys--descr">Перейти к области ред-я с номером</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>1...4</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>1...4</kbd></div>
-          </li>
-          <li id="subl-keys-layouts-8">
-            <div class="keys  keys--descr">Переключиться на боковую панель</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span>0</kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>0</kbd></div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="keys-block  keys-block--11" id="subl-keys-other">
-        <h2 class="keys-block__name">Разное</h2>
-        <ul class="keys-block__list">
-          <li id="subl-keys-other-1">
-            <div class="keys  keys--descr">Прокрутить немного вверх</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span><span class="icon-up"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-up"></span></kbd></div>
-          </li>
-          <li id="subl-keys-other-2">
-            <div class="keys  keys--descr">Прокрутить немного вниз</div>
-            <div class="keys  keys--win"><kbd>Ctrl<span class="plus">+</span><span class="icon-down"></span></kbd></div>
-            <div class="keys  keys--osx"><kbd>Ctrl<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-down"></span></kbd></div>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="about">
-    <p>Ряд комбинаций могут быть заняты в ОС (особенно в OS X) или переопределены плагинами. Любые горячие кнопки можно <a href="#remap">переназначить самому</a>.</p>
-    <p>Дополнения, сообщения об ошибках и лучи любви — в <a href="https://github.com/nicothin/sublime-text">репозиторий</a>: <iframe src="https://ghbtns.com/github-btn.html?user=nicothin&repo=sublime-text&type=star&count=true&size=medium" frameborder="0" scrolling="0" width="160px" height="20px"></iframe></p>
-  </div>
-
-  <div class="remap-keys" id="remap">
-    <h2>Как переназначить кнопки</h2>
-    <p>Горячие кнопки настраиваются редактированием файла с пользовательскими настройками (он имеет более высокий приоритет, чем файл с настройками по умолчанию). Под редактированием подразумевается копирование-вставка из файла с настройками по умолчанию и, возможно, смена самих кнопок.</p>
-    <p>Горячие кнопки задаются так:</p>
-    <pre>{ "keys": ["ctrl+shift+n"], "command": "new_window" }</pre>
-    <ul class="list">
-      <li><code>"keys"</code> — собственно, комбинация кнопок.</li>
-      <li><code>"command"</code> — команда Sublime Text или плагина.</li>
-    </ul>
-    <p>Пользовательские настройки горячих кнопок находятся в Preferences → Key Bindings - User</p>
-    <p>Настройки горячих кнопок самого Sublime Text по умолчанию находятся в Preferences → Key Bindings - Default</p>
-    <p>Горячие кнопки плагинов можно посмотреть в файлах плагинов. К примеру, для Emmet кнопки по умолчанию описаны в Preferences → Package Settings → Emmet → Key Bindings - Default</p>
-  </div>
-</div>
-
-<script type="text/javascript">
-
-  // Работа фильтра
-
-  document.getElementById('find').focus();
-  document.getElementById('find').addEventListener('keyup',find);
-  document.getElementById('find').addEventListener('change',find);
-  document.getElementById('find').addEventListener('blur',find);
-
-  function find() {
-    var find_text = window.document.getElementById('find').value;
-    var all_tr = document.querySelectorAll('.keys-block__list li');
-
-    find_text = trim(find_text);
-
-    if (!find_text) {
-      for(var i=0; i < all_tr.length; i++) {
-        all_tr[i].classList.remove('hidden');
-      }
-      list_show_toggler();
-      return false;
-    }
-
-    if (find_text.length < 3) {
-      for(var i=0; i < all_tr.length; i++) {
-        all_tr[i].classList.remove('hidden');
-      }
-      list_show_toggler();
-      return false;
-    }
-
-    if (find_text.length >= 3) {
-      var re = new RegExp(find_text, 'i');
-
-      for(var i=0; i < all_tr.length; i++) {
-        if(!re.test(all_tr[i].querySelector('.keys--descr').innerText)) {
-          all_tr[i].classList.add('hidden');
-        }
-        else {
-          all_tr[i].classList.remove('hidden');
-        }
-      }
-      list_show_toggler();
-    }
-
-  }
-
-  // Подрезать пробелы нах
-
-  function trim(s) {
-       s = s.replace( /^\s+/g, '');
-    return s.replace( /\s+$/g, '');
-  }
-
-  // Показать или скрыть ячейки win/osx
-
-  function keys_trigger(checkbox_id, class_name) {
-    var chbx = document.getElementById(checkbox_id);
-    var all_td = document.getElementsByClassName(class_name);
-    if(chbx.checked){
-      for(var i=0; i < all_td.length; i++) {
-        all_td[i].classList.remove('hidden');
-      }
-    }
-    else {
-      for(var i=0; i < all_td.length; i++) {
-        all_td[i].classList.add('hidden');
-      }
-    }
-  }
-
-  // Показать или скрыть списки
-
-  function list_show_toggler() {
-
-    var all_list = document.querySelectorAll('.keys-block');
-
-    var li_num_h;
-
-    for(var i=0; i < all_list.length; i++) {
-      li_num_h = all_list[i].querySelectorAll('li:not(.hidden)').length;
-
-      if(!li_num_h) {
-        all_list[i].classList.add('hidden');
-      }
-      else {
-        all_list[i].classList.remove('hidden');
-      }
-    }
-  }
-
-  // Обрабатываем клики по ссылкам-якорям
-
-  var local_links = document.querySelectorAll('a[href^="#"]');
-  for(var i=0; i < local_links.length; i++) {
-    local_links[i].addEventListener('click',show_target_li);
-  }
-
-  // Показываем целевой LI
-
-  function show_target_li() {
-    var li = document.querySelector(this.hash);
-    li.classList.remove('hidden');
-    li.closest('.keys-block').classList.remove('hidden');
-  }
-
-</script>
+        </div>
+    </footer>
 
 </body>
+
 </html>
